@@ -362,7 +362,7 @@ def main():
    
         if(st.sidebar.button(label="Download Complete Report")):
             report=sz.analyze(df)
-            report.show_html()
+            report.show_html('EDA-Report.html',open_browser=True)
 
 if __name__ == '__main__':
     load = DataFrame_Loader()
