@@ -7,5 +7,4 @@ seaborn
 plotly 
 sweetviz 
 pdfkit
-os
 stat
