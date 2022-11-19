@@ -13,6 +13,8 @@ import sweetviz as sz
 import pdfkit
 import os
 import stat
+from pandas_profiling import ProfileReport
+from streamlit_pandas_profiling import st_profile_report
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -360,9 +362,14 @@ def main():
         if(option1 != listy1[0] or option2 != listy2[0] or option3 != listy3[0] or option4 != listy4[0] or option5 != listy5[0]):
             success_txt.empty()
    
-        if(st.sidebar.button(label="Download Complete Report")):
-            report=sz.analyze(df)
-            report.show_html('EDA-Report.html',open_browser=True)
+        if(st.sidebar.button(label="View Complete Report")):
+            pr = ProfileReport(df, explorative=True)
+            st.header('Fullscale Analysis Report')
+            export=pr.to_html()
+            st.download_button(label="Download Full Report", data=export, file_name='report.html')
+            
+            st_profile_report(pr)
+            
 
 if __name__ == '__main__':
     load = DataFrame_Loader()
