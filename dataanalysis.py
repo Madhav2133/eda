@@ -1,6 +1,6 @@
 # Meghana - CS20B1060
 # Madhav - CS20B1047
-# Web Application to perform Statistical Analysis, EDA & Data Visualisation
+# Web Application (GUI) to perform Statistical Analysis, EDA & Data Visualisation
 
 import streamlit as st
 import pandas as pd
