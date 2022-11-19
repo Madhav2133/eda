@@ -2,9 +2,9 @@ streamlit
 pandas 
 numpy
 scipy  
-matplotlib.pyplot 
+matplotlib
 seaborn 
-plotly.express 
+plotly 
 sweetviz 
 pdfkit
 os
