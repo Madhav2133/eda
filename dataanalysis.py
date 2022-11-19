@@ -209,9 +209,7 @@ class Attribute_Information():
 
     
 def main():
-    
-    flag = 0
-    
+
     st.title("Summary Statistics, EDA & Data Visualisation")
     
     # st.info("Upload your csv file here ;)") 
@@ -370,11 +368,6 @@ def main():
                             layout='widescreen',
                             # scale=0.7       
                     )
-            flag = 1
-   
-    if(flag == 1):
-          pdfkit.from_file('/home/madhav/5th_sem_courses/DS/eda/EDA-Report.html', 'EDA-Report.pdf')
-          os.remove('/home/madhav/5th_sem_courses/DS/eda/EDA-Report.html')
 
 if __name__ == '__main__':
     load = DataFrame_Loader()
